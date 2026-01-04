@@ -1,4 +1,4 @@
-# Physics-Consistent Radar Emulation (WGAN-GP)
+# Generative Emulation of Physics-Based Radar Range-Doppler Maps
 
 ![Project Status](https://img.shields.io/badge/Status-Research_Prototype-blue) 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -8,9 +8,13 @@
 **Statistical Emulation of Single-CPI Radar Range-Doppler Maps using Conditional WGAN-GP**
 
 ## 📖 1. Purpose and Context
-This project addresses the challenge of data scarcity in radar research by combining **physics-based simulation** with **generative AI**. The primary objective is to investigate whether a **Conditional Wasserstein GAN (cWGAN-GP)** can statistically emulate intermediate radar processing products—specifically single-CPI Range-Doppler (RD) maps—when trained on physics-consistent synthetic data.
+This project addresses the challenge of data scarcity in radar research by combining **physics-based simulation** with **generative AI**. The primary objective is to investigate whether a **Conditional Wasserstein GAN (cWGAN-GP)** can act as a high-fidelity **statistical emulator** for intermediate radar processing products—specifically single-CPI Range-Doppler (RD) maps.
 
-The work serves as a methodological exploration into using generative models as nonlinear density estimators for complex radar signatures.
+### ⚠️ Important Distinction
+* **The Data:** Generated via a **physics-consistent** MATLAB simulation (Phased Array System Toolbox) that explicitly models X-band propagation, RCS, and micro-motion kinetics.
+* **The Model:** A **data-driven** statistical model (cWGAN-GP). It does not solve Maxwell's equations directly but learns to approximate the high-dimensional probability distribution of the physics-based training data.
+
+The goal is to determine if a statistical model can serve as a computationally efficient surrogate for expensive physical simulations while preserving key signal characteristics.
 
 ---
 
@@ -34,7 +38,7 @@ The raw signal undergoes **Matched Filtering** (range compression) and **Doppler
 
 $$RD(r, f_D) = |\mathcal{F}_n \{ \int r(t,n) s^*(t-\tau) dt \}|$$
 
-> **Critical Distinction:** This project generates **Single-CPI Range-Doppler maps**, which capture mean Doppler and spread. It does *not* generate micro-Doppler spectrograms, which would require sliding-window time-frequency analysis (STFT).
+> **Note:** This project generates **Single-CPI Range-Doppler maps**, which capture mean Doppler and spread. It does *not* generate micro-Doppler spectrograms, which would require sliding-window time-frequency analysis (STFT).
 
 ---
 
@@ -104,7 +108,7 @@ The generative model was evaluated against the physics-based ground truth.
 
 ### Prerequisites
 * MATLAB (with Phased Array System Toolbox)
-* Python 3.x (Requires NumPy, Matplotlib, and Deep Learning Framework)
+* Python 3.x (Requires NumPy, Matplotlib, and TensorFlow)
 
 ### Running the Project
 1.  **Generate Data:** Run `generate_dataset.m` in MATLAB to create the training `.mat` files.
@@ -118,8 +122,8 @@ If you use this code or methodology in your research, please cite this repositor
 
 ```bibtex
 @software{Dubey_Radar_WGAN_2025,
-  author = {Dubey, Manan},
-  title = {Physics-Consistent Radar Emulation using Conditional WGAN-GP},
+  author = {Manan, Dubey},
+  title = {Generative Emulation of Physics-Based Radar Range-Doppler Maps},
   year = {2025},
-  url = {[https://github.com/manandubey/radar-gan](https://github.com/manandubey/radar-gan)}
+  url = {[https://github.com/MananDubey/radar-gan](https://github.com/MananDubey/radar-ggan)}
 }
