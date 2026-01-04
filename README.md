@@ -121,5 +121,5 @@ If you use this code or methodology in your research, please cite this repositor
   author = {Dubey, Manan},
   title = {Physics-Consistent Radar Emulation using Conditional WGAN-GP},
   year = {2025},
-  url = {[https://github.com/yourusername/physics-radar-wgan](https://github.com/yourusername/physics-radar-wgan)}
+  url = {[https://github.com/manandubey/radar-gan](https://github.com/manandubey/radar-gan)}
 }
