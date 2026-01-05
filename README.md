@@ -58,7 +58,7 @@ The resulting Range-Doppler response is:
 
 $$
 RD(r, f_D) =
-\left| \mathcal{F}_n \left\{ \int r(t,n)\, s^*(t-\tau)\, dt \right\} \right|
+| \mathcal{F}_n \{ \int r(t,n)\, s^*(t-\tau)\, dt \} |
 $$
 
 The dataset consists of **single-CPI, log-magnitude (dB) Range-Doppler maps**.
