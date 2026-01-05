@@ -1,9 +1,6 @@
 # Generative Emulation of Physics-Based Radar Range-Doppler Maps
 
-![Project Status](https://img.shields.io/badge/Status-Research_Prototype-blue)  
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
-![MATLAB](https://img.shields.io/badge/MATLAB-Phased_Array_Toolbox-orange)  
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Project Status](https://img.shields.io/badge/Status-Research_Prototype-blue)  [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)  ![MATLAB](https://img.shields.io/badge/MATLAB-Phased_Array_Toolbox-orange)  ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 
 **Statistical Emulation of Single-CPI Radar Log-Magnitude Range-Doppler Maps using Conditional WGAN-GP**
 
